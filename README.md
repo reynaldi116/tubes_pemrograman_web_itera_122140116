@@ -1,13 +1,28 @@
 # MyKuliner — Tempat Review Kuliner Berbagai Restoran
 
+## Deskripsi Website
 
-Backend-nya pakai **Python Pyramid**, frontend-nya keren pake **React JS**.  
+Website yang berisi user dapat melakukan login, register akun, logout. Dalam dashboard bisa melakukan tambah review dari kuliner di suatu restoran, menginput nama kuliner, restoran, alamat, poto (opsional), deskripsi, dan juga rating bintang. Hasil review dapat difilter dari abjad, rating, dan bisa dicari. Dalam melakukan aksi CRUD pada hasil review.
 
 ## Alasan Membuat MyKuliner
 
 Setiap pembeli pasti ingin menikmati makanan yang enak. Makanan yang enak pasti dapat diterima banyak orang. Oleh karena itu, penilaian orang terhadap makanan penting. Penilaian atau review menjadi penting untuk konsumen memilih makanan. Itulah alasan saya membuat website kecil ini. Alasan lain karena saya doyan makan, dan mau cari makan enak, ya harus liat respon banyak orang dong. Selain itu juga saya terinspirasi gofood dan shopeefood. Alasan lainnya karena ini tugas akhir dari Matakuliah Pemrograman Web.
 
 ---
+
+## Fitur Utama
+
+* **Autentikasi Pengguna:** Registrasi dan Login pengguna.
+* **Dashboard Review:** Menampilkan semua review kuliner yang telah dibuat oleh pengguna yang sedang login.
+* **Manajemen Review (CRUD):**
+    * Membuat review kuliner baru (nama kuliner, nama restoran, alamat, deskripsi, URL foto, rating bintang).
+    * Mengedit review yang sudah ada.
+    * Menghapus review.
+* **Pencarian & Penyaringan:**
+    * Mencari review berdasarkan nama kuliner atau nama restoran.
+    * Memfilter review berdasarkan rating bintang.
+    * Mengurutkan review berdasarkan abjad (nama kuliner, nama restoran).
+* **Data Dummy:** Inisialisasi otomatis data pengguna dan review dummy untuk memudahkan pengujian dan demonstrasi.
 
 ## Dosen Pengampu
 
@@ -25,20 +40,6 @@ NIM : 122140116
 GitHub: [@reynaldi116](https://github.com/reynaldi116)  
 
 ---
-
-### Fitur Utama
-
-* **Autentikasi Pengguna:** Registrasi dan Login pengguna.
-* **Dashboard Review:** Menampilkan semua review kuliner yang telah dibuat oleh pengguna yang sedang login.
-* **Manajemen Review (CRUD):**
-    * Membuat review kuliner baru (nama kuliner, nama restoran, alamat, deskripsi, URL foto, rating bintang).
-    * Mengedit review yang sudah ada.
-    * Menghapus review.
-* **Pencarian & Penyaringan:**
-    * Mencari review berdasarkan nama kuliner atau nama restoran.
-    * Memfilter review berdasarkan rating bintang.
-    * Mengurutkan review berdasarkan abjad (nama kuliner, nama restoran).
-* **Data Dummy:** Inisialisasi otomatis data pengguna dan review dummy untuk memudahkan pengujian dan demonstrasi.
 
 ## 🛠️ Instalansi Penggunaaan
 
@@ -111,5 +112,10 @@ Pastikan Postgres Telah Diinstal. Perbarui file `development.ini` dengan URL ses
   * `src/hooks/` – Kustom hook
   * `src/lib/utils.js` – Fungsi utilitas
 
+
+### Referensi
+https://www.programiz.com/python-programming/examples/pyramid-patterns
+https://react.dev/learn
+https://github.com/BelajarPyramidReact
 
 ### Terima Kasih
