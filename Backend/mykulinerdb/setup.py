@@ -1,4 +1,5 @@
 import os
+
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -8,37 +9,30 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
-    'plaster_pastedeploy',
-    'pyramid',
-    'pyramid_jinja2',
-    'pyramid_debugtoolbar',
-    'waitress',
     'alembic',
+    'plaster_pastedeploy',
+    'pyramid >= 1.9',
+    'pyramid_debugtoolbar',
+    'pyramid_jinja2',
     'pyramid_retry',
     'pyramid_tm',
     'SQLAlchemy',
     'transaction',
     'zope.sqlalchemy',
-    'bcrypt',                
-    'marshmallow',           
-    'pyramid-marshmallow',   
-    'WebTest',               
-    'pytest',                
-    'pytest-cov',            
-    'Pillow',
-    'psycopg2-binary'                
+    'waitress',
+    'psycopg2-binary'
 ]
 
 tests_require = [
-    'WebTest',
-    'pytest',
+    'WebTest >= 1.3.1',  # py3 compat
+    'pytest>=3.7.4',
     'pytest-cov',
 ]
 
 setup(
-    name='backend',
+    name='mykulinerdb',
     version='0.0',
-    description='nels_kitchen',
+    description='mykulinerdb',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
         'Programming Language :: Python',
@@ -50,7 +44,7 @@ setup(
     author_email='',
     url='',
     keywords='web pyramid pylons',
-    packages=find_packages(exclude=['tests']),
+    packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
     extras_require={
@@ -59,10 +53,10 @@ setup(
     install_requires=requires,
     entry_points={
         'paste.app_factory': [
-            'main = backend:main',
+            'main = mykulinerdb:main',
         ],
         'console_scripts': [
-            'initialize_backend_db=backend.scripts.initialize_db:main',
+            'initialize_mykulinerdb_db = mykulinerdb.scripts.initialize_db:main',
         ],
     },
 )

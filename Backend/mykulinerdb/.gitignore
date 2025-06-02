@@ -11,7 +11,7 @@ dist/
 nosetests.xml
 env*/
 tmp/
-Data*.fs*
+Data.fs*
 *.sublime-project
 *.sublime-workspace
 .*.sw?
@@ -19,4 +19,3 @@ Data*.fs*
 .DS_Store
 coverage
 test
-*.sqlite

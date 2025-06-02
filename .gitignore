@@ -1,0 +1,11 @@
+# Virtual environments
+env/
+venv/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Other files
+*.sqlite3
+*.log

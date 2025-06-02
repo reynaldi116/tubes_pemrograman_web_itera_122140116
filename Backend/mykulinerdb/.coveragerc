@@ -1,2 +1,3 @@
 [run]
-source = backend
+source = mykulinerdb
+omit = mykulinerdb/test*
